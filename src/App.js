@@ -6,6 +6,12 @@ import navalogo from './components/images/nikebgimage.png';
 import cartbasket from './components/images/bluecart1.svg';
 import arrow from './components/images/greenarrow.PNG'
 import arcshoe from './components/images/nikeshoereral.png'
+import scrollshoe1 from './components/images/redshoebg.png'
+import scrollshoe2 from './components/images/brownshoe2bg.png'
+import scrollshoe3 from './components/images/whiteshoef.png'
+import scrollshoe4 from './components/images/brownshoe4bg.png'
+
+
 import './App.css';
 
 
@@ -74,9 +80,13 @@ function App() {
         <div className="contentcontainer">
            <div className="shoecontainer">
            <img src={arcshoe}></img>
+          
           </div>
+          <div className="verticalcurve">
+             
+             </div>
           <div className="colorcontainer">
-        
+           
           <div class="containercolor">
               <div class="color firstball"></div>
           </div>
@@ -95,23 +105,76 @@ function App() {
 
         <div className="scrollcontainer">
         <div className="bottomshoecontainer">
-            <span className="leftconatiner">
-               
+            <span className="leftcontainer">
+            <img src={scrollshoe1}></img>
             </span>
             <span className="rightcontainer">
-               <h1>right</h1>
+               <h1>NIKE AIR HUARHE PREMIUM <br></br>
+               
+                   
+               icons 
+                   <br></br>
+                   
+                     $185
+                   <br></br>
+                   <span>3COLORS</span>
+                 </h1>
             </span>
           </div>
 
           <div className="bottomshoecontainer1">
-            <span className="leftconatiner1">
-               
+            <span className="leftcontainer1">
+            <img src={scrollshoe2}></img>
             </span>
             <span className="rightcontainer1">
-               <h1>right</h1>
+            <h1>NIKE AIR FORCE 1 HIGH<br></br>
+               
+                   
+               icons 
+                   <br></br>
+                   
+                     $185
+                   <br></br>
+                   <span>3COLORS</span>
+                 </h1>
             </span>
           </div>
           
+          <div className="bottomshoecontainer2">
+            <span className="leftcontainer2">
+            <img src={scrollshoe3}></img>
+            </span>
+            <span className="rightcontainer2">
+            <h1>NIKE AIR SPAN 11 PREMIUM <br></br>
+               
+                   
+               icons 
+                   <br></br>
+                   
+                     $235
+                   <br></br>
+                   <span>3COLORS</span>
+                 </h1>
+            </span>
+          </div>
+
+          <div className="bottomshoecontainer3">
+            <span className="leftcontainer3">
+            <img src={scrollshoe4}></img>
+            </span>
+            <span className="rightcontainer3">
+            <h1>NIKE AIR HUARHE PREMIUM <br></br>
+               
+                   
+               icons 
+                   <br></br>
+                   
+                     $270
+                   <br></br>
+                   <span>3COLORS</span>
+                 </h1>
+            </span>
+          </div>
         </div>
       </main>
     </div>
