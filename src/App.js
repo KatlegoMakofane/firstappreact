@@ -10,12 +10,23 @@ import scrollshoe1 from './components/images/redshoebg.png'
 import scrollshoe2 from './components/images/brownshoe2bg.png'
 import scrollshoe3 from './components/images/whiteshoef.png'
 import scrollshoe4 from './components/images/brownshoe4bg.png'
+import firststar from './components/images/star1.png'
+import React , { useState } from 'react';
+
 
 
 import './App.css';
+import Firstpic from './components/images/firstpic';
+import Secondpic from './components/images/secondpic';
+import Thirpci from './components/images/thirpci';
 
 
 function App() {
+  const [containercolor, setContainercolor] = useState(1);
+     const toogle=(index) =>{ 
+       setContainercolor(index)
+       console.log(containercolor);
+    };
   return (
     <div className="App">
       <header className="App-header">
@@ -78,27 +89,44 @@ function App() {
           <h1 className="NIKE">NIKE</h1>
        
         <div className="contentcontainer">
-           <div className="shoecontainer">
-           <img src={arcshoe}></img>
+            <div className="shoecontainer">
+              {
+                (containercolor === 0 ? <Firstpic /> : containercolor === 1 ? <Secondpic/> : <Thirpci /> )
+                
+            }
+              
           
-          </div>
+            </div>
           <div className="verticalcurve">
              
              </div>
           <div className="colorcontainer">
            
-          <div class="containercolor">
-              <div class="color firstball"></div>
+          <div className="containercolor">
+            
+              <div  onClick={()=>toogle(0)}   className={'containercolor' === 0 ? "containercolor" : "activebtn0"}>
+                
+         
+              </div>
+              
           </div>
 
          
-          <div class="containercolor">
-             <div class="color secondball"></div>
+          <div className="containercolor">
+            
+             <div  onClick={()=>toogle(1)} className={'containercolor' === 1 ? "containercolor" : "activebtn1" }>
+              </div>
+
+             
           </div>
 
            
-             <div class="containercolor">
-                 <div class="color thirdball"></div>
+             <div className="containercolor">
+                 
+                 <div  onClick={()=>toogle(2)} className={'containercolor' === 2 ? "containercolor" : "activebtn2" }>
+                
+               
+                 </div>
             </div>
           </div>
         </div>
@@ -106,13 +134,15 @@ function App() {
         <div className="scrollcontainer">
         <div className="bottomshoecontainer">
             <span className="leftcontainer">
+            
+         
             <img src={scrollshoe1}></img>
             </span>
             <span className="rightcontainer">
                <h1>NIKE AIR HUARHE PREMIUM <br></br>
                
                    
-               icons 
+               <img src={firststar}></img>
                    <br></br>
                    
                      $185
@@ -175,7 +205,13 @@ function App() {
                  </h1>
             </span>
           </div>
+          
+          
+          
         </div>
+
+
+        
       </main>
     </div>
   );
